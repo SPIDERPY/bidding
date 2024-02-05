@@ -1,0 +1,16 @@
+<div class="lego">
+    <img [src]="user.photo" [alt]="user.name"/>
+</div>
+<p>Nom: {{user.name}}</p>
+<p>Prénom: {{user.firstName}}</p>
+
+
+<div>
+    <label class="label-userquote" for={{user.quote}}>{{user.quote}}<br></label>
+    <input type="text" [(ngModel)]="user.quote" id={{user.quote}}>
+</div><br>
+
+<button (click)="toggleData()">Afficher/Masquer mon âge</button> 
+<div *ngIf="toDisplay"> 
+    <p>{{user.age}}</p>   
+</div> 
